@@ -1,6 +1,9 @@
+require 'pg'
 require 'pry'
 require_relative 'contact'
 require_relative 'contact_database'
+
+
 
 # TODO: Implement command line interaction
 

@@ -20,6 +20,9 @@ class Contact
  
   ## Class Methods
   class << self
+
+  
+
     def create(id, name, email)
       # TODO: Will initialize a contact as well as add it to the list of contacts
       Contact.new(id, name, email)
@@ -29,12 +32,10 @@ class Contact
       # TODO: Will find and return contacts that contain the term in the first name, last name or email
       contacts = ContactDatabase.read
       match = contacts.find_all do |contact|
-        contact[1].include? term || contact[2].include? term
+        contact[1].include?(term) || contact[2].include?(term)
       end
 
-      match.each do |contact|
-        puts "#{contact[0]}: #{contact[1]}, #{contact[2]}"
-      end
+      
 
     end
  
